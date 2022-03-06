@@ -1,6 +1,8 @@
 # Formulario_rh
 Exemplo de um formulário para cadastro de funcionários HTML\CSS e Javascript
 
+<img src="https://github.com/EmersonBarcelos/Formulario_rh/blob/main/image.png"/>
+
 <h2>Funções programadas</h2>
 <ul>
   <li>Caso o campo "meu salário" estiver vazio será automaticamente preenchido com valor padrão do cargo
@@ -12,4 +14,4 @@ Exemplo de um formulário para cadastro de funcionários HTML\CSS e Javascript
 </ul>
 
 
-<img src="https://github.com/EmersonBarcelos/Formulario_rh/blob/main/image.png"/>
+
