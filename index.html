@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Sistema de RH</title>
+        <link rel="stylesheet" href="public/css/style.css">
+        <script src="public/js/script.js"></script>
+    </head>
+    <body>
+       <form name="Cadastro" method="post" action="index.html" autocomplete="on" target="_self" id="Cadastro">
+           <div>
+               <h1 id="cabecalho">Cadastro de Funcionário</h1> 
+               <p>
+                   <label for="TxNome">Seu nome</label>
+                   <input type="text" id="TxNome" name="TxNome" size="20" placeholder="nome" required="required">
+               </p>
+               <p>
+                   <label for="Txemail">Seu e-mail</label>
+                   <input type="email" id="Txemail" name="Txemail" size="20" placeholder="contato@dominio" required="required">
+               </p>
+                   <label for="Txdate">Seu nascimento</label>
+                   <input type="date" id="Txdate" name="Txdate" size="20" required="required">
+               <p>
+                   <label for="Txsalario">Seu salario</label>
+                   <input type="number" id="Txsalario" name="Txsalario" size="20" required="required">
+               </p>
+               <p>
+                   <label for="TxTotalSal">Total Salario </label>
+                   <input type="number" name="TxTotalSal" id="TxTotalSal" disabled>
+               </p>
+               <p>
+                   <label for="SelCargo">Seu cargo</label> 
+                   <select name="SelCargo" id="SelCargo" required="required" onchange="
+                       empregado.calcular()">
+                        <option value="1" selected>selecione...</option>
+                        <option value="2">Gerente</option>
+                        <option value="3">Analista de Sistemas</option>
+                        <option value="4">Desenvolvedor</option>
+                        <option value="5">DBA</option>
+                   </select>
+               </p>
+               <input id="botao" type="button" value="Gravar" onclick="
+                   try{
+                       empregado.validar(document.getElementById('TxNome').value, 
+                       document.getElementById('Txdate').value)
+                   } catch (error){
+                       alert(error.message);
+                   }
+               ">
+            </div>
+        </form> 
+    </body>
+</html>
